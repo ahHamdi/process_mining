@@ -1,15 +1,3 @@
-<style>
-    center > img {
-        width:50%;
-    }
-    .legend{
-        text-align:right;
-        color:gray;
-        font-style:italic;
-    }
-</style>
-
-
 # Project 
 
 ## Introduction
