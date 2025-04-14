@@ -46,15 +46,6 @@ Il est important de noter que la propriété `religious affiliation`, qui aurait
 
 *<u>Source</u> : https://www.pads.rwth-aachen.de/cms/PADS/Forschung/Event-Logs/~bcbswu/-Un-Fair-Event-Logs*
 
-<center>
-    
-<img src="https://m2-lr.freeboxos.fr/uploads/1743b49e-9c29-4e21-a6c9-879add2d4075.png"/>
-
-</center>
-
-
-
-
 ### Entité : Trace
 
 | Nom de la propriété  | Description                                                               |
@@ -98,117 +89,18 @@ Il y a avant tout, des données communes à nos trois datasets :
 
 **Nombre total d'activités effectuées dans l'ensemble des datasets:** `292 000`
 
-
-<center>
-
-<img src="https://m2-lr.freeboxos.fr/uploads/74540816-854f-42ac-93be-67397af82121.png"/>
-</center>
-
 ### Taux de succès par propriétées du dataset
 
-Nous allons observer pour chaque propriété du dataset le taux de personnes qui signent une location. Ces données nous permettront d'extraire de potentielles propriétés discriminantes. Cependant, la discrimination pouvant être multi-factorielle, les conclusions faites sur ces statistiques ne seront pas représentatives des vraies sources de discrimination et ce sera donc en addition avec le clustering que l'on obtiendra de meilleures conclusions.
-
-#### Germanophone
-<div style="text-align: center;">
-  <div style="display: flex; justify-content: center; gap: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/d5db3cae-16b5-4e32-a6ed-73d61047fa15.png" alt="Image 1" style="width: 50%;" />
-    <img src="https://m2-lr.freeboxos.fr/uploads/229694b2-7e8c-4502-81c5-f9a2fa2dd1cb.png" alt="Image 2" style="width: 50%;" />
-  </div>
-  <div style="margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/0b0f2d41-d2bc-47c7-8f23-ab15782328a7.png" alt="Image 3" style="width: 50%;" />
-  </div>
-</div>
-
-Sur ces graphiques, on observe une tendance où les non-germanophones sont légèrement plus refusés. Ainsi on qualifie cette propriété comme légèrement discriminante.
-
-
-#### Groupe d'âge
-
-<div style="text-align: center;">
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/bfd39d99-4d0f-423e-b72e-65e34813c1d5.png" alt="Image 4" style="width: 50%;" />
-    <img src="https://m2-lr.freeboxos.fr/uploads/b41429ed-42a4-4557-ba50-aa74400d34d5.png" alt="Image 5" style="width: 50%;" />
-  </div>
-  <div style="margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/b0bce5bf-41da-4702-88c9-40d3338dfd1f.png" alt="Image 6" style="width: 50%;" />
-  </div>
-</div>
-
-Ici, on observe de manière globale une baisse des signatures pour les personnes de plus en plus âgées. Cette propriété est donc discriminante.
-
-#### Genre (H/F)
-
-<div style="text-align: center;">
-  <div style="display: flex; justify-content: center; gap: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/ec622fb1-b559-4fa2-871a-4b74276e5def.png" alt="Image 1" style="width: 50%;" />
-    <img src="https://m2-lr.freeboxos.fr/uploads/7fd5d334-3c08-4157-be21-01514104ed50.png" alt="Image 2" style="width: 50%;" />
-  </div>
-  <div style="margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/bd8d5b7b-5f18-4d63-8df0-40be12d6bd97.png" alt="Image 3" style="width: 50%;" />
-  </div>
-</div>
-
-Nous avons décidé qu’un homme est symbolisé par True et une femme par False.
-
-Ainsi, ici on observe moins de signatures pour les femmes, on classe donc cette propriété comme discriminante.
-
-#### Citoyenneté
-
-<div style="text-align: center;">
-  <div style="display: flex; justify-content: center; gap: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/62b52479-d09b-4d32-abb5-a85e467976ac.png" alt="Image 1" style="width: 50%;" />
-    <img src="https://m2-lr.freeboxos.fr/uploads/f0a720a8-278a-4cd0-9c58-c3a9e2f82314.png" alt="Image 2" style="width: 50%;" />
-  </div>
-  <div style="margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/c2317bb6-544e-4287-8c39-568f068f1ce2.png" alt="Image 3" style="width: 50%;" />
-  </div>
-</div>
-
-Encore une fois, on observe une différence entre ceux qui ont la nationalité et ceux qui ne l'ont pas. 
-Cette propriété est donc légèrement discriminante.
-
-#### Statut protégé
-<div style="text-align: center;">
-  <div style="display: flex; justify-content: center; gap: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/2af3f35f-cffa-4569-914b-5f8c1e17b570.png" alt="Image 1" style="width: 50%;" />
-    <img src="https://m2-lr.freeboxos.fr/uploads/aba7127a-7d05-4047-9884-ca20519560c7.png" alt="Image 2" style="width: 50%;" />
-  </div>
-  <div style="margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/43545119-6319-48f7-8514-409341de3631.png" alt="Image 3" style="width: 50%;" />
-  </div>
-</div>
-
-Ici les observations sont très claires, les possesseurs du statut "protected" signent moins souvent que ceux qui ne l'ont pas.
-La propriété est clairement discriminante.
-
-#### Statut marital
-<div style="text-align: center;">
-  <div style="display: flex; justify-content: center; gap: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/f4e8982d-b078-438c-827d-97a2e22c7195.png" alt="Image 1" style="width: 50%;" />
-    <img src="https://m2-lr.freeboxos.fr/uploads/4490614f-c13c-4efb-bbe8-bd7d7d429f0f.png" alt="Image 2" style="width: 50%;" />
-  </div>
-  <div style="margin-top: 20px;">
-    <img src="https://m2-lr.freeboxos.fr/uploads/550966a2-456c-477f-9e90-5f9ac87cd8ca.png" alt="Image 3" style="width: 50%;" />
-  </div>
-</div>
-
-On observe qu'être marié augmente légèrement les chances de signer le contrat de location, donc la propriété est légèrement discriminante.
-
-<!--
-![](https://m2-lr.freeboxos.fr/uploads/43373a13-5829-441f-b185-9a0ff71ec607.png)
-
-![](https://m2-lr.freeboxos.fr/uploads/ec214d96-2435-4418-9849-810f77226f3f.png)
--->
+Nous pouvons observer pour chaque propriété du dataset le taux de personnes qui signent une location selon :
+**la langue parlée : on observe une tendance où les non-germanophones sont légèrement plus refusés. Ainsi on qualifie cette propriété comme légèrement discriminante
+**le groupe d'âge : on observe de manière globale une baisse des signatures pour les personnes de plus en plus âgées. Cette propriété est donc discriminante.
+**le genre : on observe moins de signatures pour les femmes, on classe donc cette propriété comme discriminante.
+**la cytoyenneté : on observe une différence entre ceux qui ont la nationalité et ceux qui ne l'ont pas. Cette propriété est donc légèrement discriminante.
+**le statut marital : On observe qu'être marié augmente légèrement les chances de signer le contrat de location, donc la propriété est légèrement discriminante.
 
 ### Conclusion statistiques
 
 Après cette vue d'ensemble, on a noté sur ce tableau les propriétés légèrement discriminantes en bleu, tandis que celles nettement discriminantes en rouge.
-
-<center>
-
-<img src="https://m2-lr.freeboxos.fr/uploads/7ee05529-947b-4402-8475-d13989819590.png"/>
-    
-</center>
 
 
 # Algorithme de découverte
@@ -217,21 +109,6 @@ Après une rapide vue d'ensemble, nous avons appliqué différents algorithmes (
 
 
 ### Alpha
-
-<center>
-<img src="https://cdn.discordapp.com/attachments/418667174568132618/1313418040716824619/image.png?ex=67500f5f&is=674ebddf&hm=2ae297743bfe9dbb4e4e44c87ef85983408259222cf6e14923be8287ad0b6b08&"/>
-
-<p class="legend">
-    Capture d'écran du réseau de Petri généré par PM4PY sur le dataset <code>renting_log_medium</code>
-</p>
-
-
-<img src="https://m2-lr.freeboxos.fr/uploads/e6797957-64d8-48f3-b2bd-a573a7dd52d0.jpg"/>
-
-<p class="legend">
-    Capture d'écran du réseau de Petri généré par ProM sur le dataset <code>renting_log_medium</code>
-</p>
-</center>
 
 | Métrique        | High | Medium | Low  | Moyenne |
 | --------------- | ---- | ------ | ---- | ------- |
@@ -257,45 +134,6 @@ L'Alpha Miner ($\alpha$-Algorithm) est un algorithme simple et intuitif, efficac
 
 Le Fuzzer Miner est un algorithme de mining de processus qui utilise une approche exploratoire basée sur le "fuzzing". Il perturbe aléatoirement les événements et relations dans les logs pour découvrir de nouveaux modèles de processus, y compris des comportements complexes ou inattendus. Bien qu'il soit robuste face aux anomalies dans les données, il peut produire des modèles plus difficiles à interpréter et moins précis que des algorithmes classiques. Il est utile pour tester la résilience des processus et identifier des comportements non observés dans les logs.
 
-<center>
-    
-<img src="https://m2-lr.freeboxos.fr/uploads/c70cc25a-814b-4b17-a6a6-13c26322e1cf.png"/>
-    
-
-<p class="legend">
-     Capture d'écran du fuzzy model généré par Fuzzer Miner avec ProM sur le dataset <code>renting_log_low</code>
-</p>
-    
-</center>
-
-<center>
-
-<img src="https://m2-lr.freeboxos.fr/uploads/53a1bd6c-b92e-491b-b899-c9666304fa44.png"/>
-
-
-<p class="legend">
-     Capture d'écran du fuzzy model généré par Fuzzer Miner avec ProM sur le dataset <code>renting_log_medium</code>
-</p>
-    
-</center>
-
-<center>
-    
-<img src="https://m2-lr.freeboxos.fr/uploads/b5cc130f-00ed-49ba-a3c9-220b606549dc.png">
-    
-</center>
-
-Cluster 17: 
-
-<center>
-    
-<img src="https://m2-lr.freeboxos.fr/uploads/3bac68bb-dd7f-46ad-b84e-f1678fcbe6f2.png"/>
-<p class="legend">
-     Capture d'écran du fuzzy model généré par Fuzzer Miner avec ProM sur le dataset <code>renting_log_high</code>
-</p>
-    
-</center>
-
 
 | Métrique                | High | Medium | Low  | Moyenne |
 | ----------------------- | ---- | ------ | ---- | ------- |
@@ -304,12 +142,6 @@ Cluster 17:
 
 
 ### Heuristic
-
-![](https://m2-lr.freeboxos.fr/uploads/c8fa5fe5-1ab7-4ffb-8dfa-fb255d308aa7.png)
-<p class="legend">
-     Capture d'écran du réseau de Petri généré par Heuristic Miner avec PM4PY
-</p>
-
 
 | Métrique                       | High  | Medium | Low   | Moyenne |
 | ------------------------------ | ----- | ------ | ----- | ------- |
@@ -333,13 +165,6 @@ En somme, l'Heuristic Miner est un choix idéal pour des scénarios où la préc
 
 ### Inductive
 
-![](https://m2-lr.freeboxos.fr/uploads/e2859de2-352b-403a-a87b-7a170ebd469c.png)
-
-<p class="legend">
-    Sortie du réseau de Petri généré par Inductive Miner via PM4PY
-</p>
-
-
 | Métrique        | High | Medium | Low  | Moyenne |
 | --------------- | ---- | ------ | ---- | ------- |
 | Fitness (TBR)   | 1.00 | 1.00   | 1.00 | 1.00    |
@@ -362,9 +187,6 @@ En résumé, l'Inductive Miner est un excellent choix pour ceux qui recherchent 
 
 
 ## Comparaison des modèles
-<center>
-<img src="https://m2-lr.freeboxos.fr/uploads/b15a76d5-2f22-44e4-bfa0-66f41aa56831.png"/>
-</center>
 
 Concernant la soundness des modèles, voici les résultats pour les algorithmes suivants:
 
@@ -378,12 +200,6 @@ Le choix de l'algorithme optimal pour analyser le dataset Renting dépend fortem
 ## Clustering et Profils des Groupes
 
 Afin de déterminer distinctement les facteurs discriminants et effectuer des prédictions pour déterminer si un profil d'une nouvelle personne est susceptible de signer un contrat d'appartement, nous avons effecuté un clustering sur nos données. 
-<center>
-<img src="https://m2-lr.freeboxos.fr/uploads/1b93bdc4-6a00-4447-bcca-fe6eb00b20f8.png"/>
-<p class="legend">
-    Dendogramme pour sélectionner la coupe optimale (optimal = 2)
-</p>
-</center>
 
 *Note : À partir d'ici, nous n'avons strictement rien compris à nos manipulations. Malgré l'application des connaissances aquises en cours, toute l'aide extérieure, aussi bien au près de camarades que des IA, nous n'avons pas réussi à obtenir les résultats que nous espérions... Les résultats sont à peine explicable et nous aurions aimé aller plus loin avec ces derniers.*
 
@@ -393,29 +209,9 @@ Maintenant que nous connaissons la coupe optimale, il est temps de découper nos
 - Kmeans
     - Nous avons effectué plusieurs tests via plusieurs approches dans nos codes, mais rien n'a donné de modèles satisfaisants. Prennons par exemple 2 graphes générés par nos codes `test_kmeans.py` et `test_kmeans_2.py`...
 
-<center>
-<img src="https://m2-lr.freeboxos.fr/uploads/1ac8f4bd-4150-408e-a765-384f32848167.png"/>
-<p class="legend">
- Figure des clusters générés avec test_kmeans.py
-</p>
-
-<img src="https://m2-lr.freeboxos.fr/uploads/6be57eb1-1a08-4fd0-8fde-02d312cc6fe5.png"/>
-<p class="legend">
- Figure des clusters générés avec test_kmeans_2.py
-</p>
-    
-</center>
-
 Dans les tests, on effectue une prédiction sur une nouvelle trace pour savoir si elle a ses chances d'avoir un appartement on non, basé sur l'évènement "Sign Contract". Et dû au cluster à la propotion fort discutable, la prédiction n'a pas trop de sens puisque tous les points finissent dans le même cluster. 
 
 Nous sommes également passé par une approche à l'aide de variants pour réduire le nombre de données à traiter, mais même là ce n'est pas pertinant, car les refus de contrats sont des actions souvent répétées en que quelques étapes, donc au total on peut avoir ~4 variants sur +400 cas où une personne loge dans un appartement. Nous avons aussi utilisé l'outil "Orange" en Python pour analyser nos données, et c'est là qu'on s'est rendu compte que cette approche était un peu 
-<center>
-<img src="https://cdn.discordapp.com/attachments/1293594455391211671/1316787226323062824/Capture_decran_2024-12-12_161708.png?ex=675c512b&is=675affab&hm=0e796e77b76970e78ee3a2d6d03403d2db76d4b028e03f3c37e78c8d31fb2a34&"/>
-<p class="legend">
- Affichage généré par Orange de répartition des variants selon la variable "protected", colorié selon "Sign Contract"
-</p>
-    
-</center>
 
 Quelque chose qu'on aurait pû faire pour améliorer nos analyses, c'est **divisier le processus métier en 2 sous parties** : L'un pour **l'acceptation de contrat**, l'autre **pour les résidents**. Mais ça n'a pas pu se faire à défaut de temps. 
 
