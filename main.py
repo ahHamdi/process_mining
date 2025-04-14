@@ -11,15 +11,15 @@ import seaborn as sns
 
 #load dataset
 hiring_data = pd.read_excel('dataset.xlsx')
-hiring_data = pd.read_excel('dataset.xlsx')
-hiring_data = pd.read_excel('dataset.xlsx')
-hiring_data = pd.read_excel('dataset.xlsx')
-data.head()
+renting_data = pd.read_excel('dataset.xlsx')
+hospital_data = pd.read_excel('dataset.xlsx')
+landing_data = pd.read_excel('dataset.xlsx')
 
 #data exploration
+
 #data preprocessing
 
-#modeling
+#discovery
 
 #evaluation
 

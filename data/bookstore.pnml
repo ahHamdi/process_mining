@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="bookstore" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>bookstore</text>
+    </name>
+    <page id="n0">
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <place id="p_5">
+        <name>
+          <text>p_5</text>
+        </name>
+      </place>
+      <place id="p_7">
+        <name>
+          <text>p_7</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_2">
+        <name>
+          <text>p_2</text>
+        </name>
+      </place>
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_6">
+        <name>
+          <text>p_6</text>
+        </name>
+      </place>
+      <transition id="t_1">
+        <name>
+          <text>add items</text>
+        </name>
+      </transition>
+      <transition id="t_5">
+        <name>
+          <text>pack</text>
+        </name>
+      </transition>
+      <transition id="t_6">
+        <name>
+          <text>validate</text>
+        </name>
+      </transition>
+      <transition id="t_4">
+        <name>
+          <text>pay</text>
+        </name>
+      </transition>
+      <transition id="t_3">
+        <name>
+          <text>finalize</text>
+        </name>
+      </transition>
+      <transition id="t_7">
+        <name>
+          <text>deliver</text>
+        </name>
+      </transition>
+      <transition id="t_8">
+        <name>
+          <text>cancel</text>
+        </name>
+      </transition>
+      <arc id="140533210965520" source="t_3" target="p_5"/>
+      <arc id="140533210965616" source="t_4" target="p_4"/>
+      <arc id="140533210965712" source="t_5" target="p_6"/>
+      <arc id="140533210965808" source="t_6" target="p_7"/>
+      <arc id="140533210966000" source="t_8" target="sink"/>
+      <arc id="140533210965904" source="t_7" target="sink"/>
+      <arc id="140533210964560" source="source" target="t_1"/>
+      <arc id="140533210964752" source="p_3" target="t_4"/>
+      <arc id="140533210964848" source="p_4" target="t_6"/>
+      <arc id="140533210964656" source="p_2" target="t_3"/>
+      <arc id="140533210964944" source="p_5" target="t_5"/>
+      <arc id="140533210965040" source="p_6" target="t_6"/>
+      <arc id="140533210965136" source="p_7" target="t_7"/>
+      <arc id="140533210965232" source="p_7" target="t_8"/>
+      <arc id="140533210965328" source="t_1" target="p_2"/>
+      <arc id="140533210965424" source="t_3" target="p_3"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>

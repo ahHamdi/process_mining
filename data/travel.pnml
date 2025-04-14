@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pnml>
+  <net id="travel" type="http://www.pnml.org/version-2009/grammar/pnmlcoremodel">
+    <name>
+      <text>travel</text>
+    </name>
+    <page id="n0">
+      <place id="sink">
+        <name>
+          <text>sink</text>
+        </name>
+      </place>
+      <place id="p_1">
+        <name>
+          <text>p_1</text>
+        </name>
+      </place>
+      <place id="p_2">
+        <name>
+          <text>p_2</text>
+        </name>
+      </place>
+      <place id="source">
+        <name>
+          <text>source</text>
+        </name>
+        <initialMarking>
+          <text>1</text>
+        </initialMarking>
+      </place>
+      <place id="p_3">
+        <name>
+          <text>p_3</text>
+        </name>
+      </place>
+      <place id="p_4">
+        <name>
+          <text>p_4</text>
+        </name>
+      </place>
+      <transition id="t_1">
+        <name>
+          <text>Check hotel</text>
+        </name>
+      </transition>
+      <transition id="t_2">
+        <name>
+          <text>Check plane</text>
+        </name>
+      </transition>
+      <transition id="t_4">
+        <name>
+          <text>Book hotel</text>
+        </name>
+      </transition>
+      <transition id="t_5">
+        <name>
+          <text>Book plane</text>
+        </name>
+      </transition>
+      <transition id="t_3">
+        <name>
+          <text>Decide</text>
+        </name>
+      </transition>
+      <arc id="140219817933120" source="t_2" target="p_4"/>
+      <arc id="140219817933360" source="p_4" target="t_5"/>
+      <arc id="140219797457648" source="source" target="t_1"/>
+      <arc id="140219797457936" source="t_2" target="p_1"/>
+      <arc id="140219797457744" source="source" target="t_2"/>
+      <arc id="140219797458032" source="p_1" target="t_3"/>
+      <arc id="140219797457840" source="t_1" target="p_1"/>
+      <arc id="140219797458128" source="t_3" target="p_2"/>
+      <arc id="140219797458224" source="p_2" target="t_4"/>
+      <arc id="140219797458320" source="p_2" target="t_5"/>
+      <arc id="140219797458416" source="t_4" target="sink"/>
+      <arc id="140219797458512" source="t_5" target="sink"/>
+      <arc id="140219817932208" source="t_1" target="p_3"/>
+      <arc id="140219817933264" source="p_3" target="t_4"/>
+    </page>
+    <finalmarkings>
+      <marking>
+        <place idref="sink">
+          <text>1</text>
+        </place>
+      </marking>
+    </finalmarkings>
+  </net>
+</pnml>
