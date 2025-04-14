@@ -92,11 +92,16 @@ Il y a avant tout, des données communes à nos trois datasets :
 ### Taux de succès par propriétées du dataset
 
 Nous pouvons observer pour chaque propriété du dataset le taux de personnes qui signent une location selon :
-**la langue parlée : on observe une tendance où les non-germanophones sont légèrement plus refusés. Ainsi on qualifie cette propriété comme légèrement discriminante
-**le groupe d'âge : on observe de manière globale une baisse des signatures pour les personnes de plus en plus âgées. Cette propriété est donc discriminante.
-**le genre : on observe moins de signatures pour les femmes, on classe donc cette propriété comme discriminante.
-**la cytoyenneté : on observe une différence entre ceux qui ont la nationalité et ceux qui ne l'ont pas. Cette propriété est donc légèrement discriminante.
-**le statut marital : On observe qu'être marié augmente légèrement les chances de signer le contrat de location, donc la propriété est légèrement discriminante.
+
+**la langue parlée** : on observe une tendance où les non-germanophones sont légèrement plus refusés. Ainsi on qualifie cette propriété comme légèrement discriminante
+
+**le groupe d'âge** : on observe de manière globale une baisse des signatures pour les personnes de plus en plus âgées. Cette propriété est donc discriminante.
+
+**le genre** : on observe moins de signatures pour les femmes, on classe donc cette propriété comme discriminante.
+
+**la cytoyenneté** : on observe une différence entre ceux qui ont la nationalité et ceux qui ne l'ont pas. Cette propriété est donc légèrement discriminante.
+
+**le statut marital** : On observe qu'être marié augmente légèrement les chances de signer le contrat de location, donc la propriété est légèrement discriminante.
 
 ### Conclusion statistiques
 
